@@ -2,7 +2,7 @@
 # - gtk subpackage
 # - gtk bcond
 Summary:	Utility for MP3 information and tag modification
-Summary(pl):	Program do manipulowania tagami ID3 plików w formacie MP3
+Summary(pl):	Program do manipulowania znacznikami ID3 plików w formacie MP3
 Summary(tr):	MP3 ses dosyasý bilgileri düzenleme aracý
 Name:		mp3info-rmc
 Version:	0.8.4
@@ -21,8 +21,8 @@ mp3info is a command line utility to extract and manipulate TAG (ID3)
 info from MP3 files. It also has a VERY configurable output.
 
 %description -l pl
-mp3info jest programem do manipulowania tagami ID3 plików w formacie
-MP3. Umo¿liwia dowolne skonfigurowanie wy¶wietlanych przez to
+mp3info jest programem do manipulowania znacznikami ID3 plików w
+formacie MP3. Umo¿liwia dowolne skonfigurowanie wy¶wietlanych przez to
 narzêdzie informacji.
 
 %description -l tr
@@ -35,8 +35,9 @@ deðiþtirmenizi saðlayan bir komut satýrý aracýdýr. Çeþitli þekillerde
 %patch0 -p1
 
 %build
-%{__make} CC="%{__cc}" CFLAGS="$RPM_OPT_FLAGS -I/usr/include/ncurses" \
-	mp3info gmp3info
+%{__make} mp3info gmp3info \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
 
 %install
 rm -rf $RPM_BUILD_ROOT
