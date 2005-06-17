@@ -14,6 +14,7 @@ Source0:	ftp://ftp.ibiblio.org/pub/linux/apps/sound/mp3-utils/mp3info/mp3info-%{
 Patch0:		%{name}-multiline-strings.patch 
 URL:		http://www.ibiblio.org/mp3info/ 
 BuildRequires:	gtk+-devel >= 1.2.0
+BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
