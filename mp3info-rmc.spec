@@ -2,8 +2,8 @@
 # - gtk subpackage
 # - gtk bcond
 Summary:	Utility for MP3 information and tag modification
-Summary(pl.UTF-8):   Program do manipulowania znacznikami ID3 plików w formacie MP3
-Summary(tr.UTF-8):   MP3 ses dosyası bilgileri düzenleme aracı
+Summary(pl.UTF-8):	Program do manipulowania znacznikami ID3 plików w formacie MP3
+Summary(tr.UTF-8):	MP3 ses dosyası bilgileri düzenleme aracı
 Name:		mp3info-rmc
 Version:	0.8.4
 Release:	1
