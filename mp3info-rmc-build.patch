@@ -1,0 +1,20 @@
+--- mp3info-0.8.5a/textfunc.c~	2006-11-06 09:59:12.000000000 +0100
++++ mp3info-0.8.5a/textfunc.c	2015-12-12 23:22:24.349626380 +0100
+@@ -227,7 +227,7 @@ void format_output (char *format_string,
+ 
+ 	while((percent=strchr(format,'%'))) {
+ 		*percent=0;
+-		printf(format);
++		printf("%s", format);
+ 		*percent='%';
+ 		code=percent+1;
+ 		while(*code && (code[0] != '%' && !isalpha(*code))) code++;
+@@ -354,7 +354,7 @@ void format_output (char *format_string,
+ 		}
+ 		
+ 	}
+-	printf(format);
++	printf("%s", format);
+ }
+ 
+ 

@@ -3,11 +3,12 @@ Summary(pl.UTF-8):	Program do manipulowania znacznikami ID3 plików w formacie M
 Summary(tr.UTF-8):	MP3 ses dosyası bilgileri düzenleme aracı
 Name:		mp3info-rmc
 Version:	0.8.5a
-Release:	5
+Release:	6
 License:	GPL v2+
 Group:		Applications/Sound
 Source0:	ftp://ftp.ibiblio.org/pub/linux/apps/sound/mp3-utils/mp3info/mp3info-%{version}.tgz
 # Source0-md5:	cb7b619a10a40aaac2113b87bb2b2ea2
+Patch0:		%{name}-build.patch
 URL:		http://www.ibiblio.org/mp3info/ 
 BuildRequires:	gtk+2-devel >= 1:2.0
 BuildRequires:	ncurses-devel
@@ -43,11 +44,12 @@ formacie MP3.
 
 %prep
 %setup -q -n mp3info-%{version}
+%patch0 -p1
 
 %build
 %{__make} mp3info gmp3info \
 	CC="%{__cc}" \
-	CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
+	CFLAGS="%{rpmcppflags} %{rpmcflags} -I/usr/include/ncurses"
 
 %install
 rm -rf $RPM_BUILD_ROOT
