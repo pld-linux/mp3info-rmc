@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Program do manipulowania znacznikami ID3 plików w formacie M
 Summary(tr.UTF-8):	MP3 ses dosyası bilgileri düzenleme aracı
 Name:		mp3info-rmc
 Version:	0.8.5a
-Release:	4
+Release:	5
 License:	GPL v2+
 Group:		Applications/Sound
 Source0:	ftp://ftp.ibiblio.org/pub/linux/apps/sound/mp3-utils/mp3info/mp3info-%{version}.tgz
