@@ -44,7 +44,7 @@ formacie MP3.
 
 %prep
 %setup -q -n mp3info-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__make} mp3info gmp3info \
